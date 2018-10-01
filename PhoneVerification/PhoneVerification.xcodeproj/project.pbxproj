@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		19C75B812162A8D6008F2423 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75B802162A8D6008F2423 /* AppDelegate.swift */; };
-		19C75B832162A8D6008F2423 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75B822162A8D6008F2423 /* ViewController.swift */; };
 		19C75B862162A8D6008F2423 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C75B842162A8D6008F2423 /* Main.storyboard */; };
 		19C75B882162A8D7008F2423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C75B872162A8D7008F2423 /* Assets.xcassets */; };
 		19C75B8B2162A8D7008F2423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C75B892162A8D7008F2423 /* LaunchScreen.storyboard */; };
 		19C75B962162A8D7008F2423 /* PhoneVerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75B952162A8D7008F2423 /* PhoneVerificationTests.swift */; };
 		19C75BA12162A8D7008F2423 /* PhoneVerificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BA02162A8D7008F2423 /* PhoneVerificationUITests.swift */; };
+		19C75BB62162AF7B008F2423 /* PhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C75BB42162AF7B008F2423 /* PhoneVerificationViewController.xib */; };
+		19C75BB92162C4CD008F2423 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BB82162C4CD008F2423 /* AppCoordinator.swift */; };
+		19C75BBB2162C9BC008F2423 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BBA2162C9BC008F2423 /* Coordinator.swift */; };
+		19C75BBD2162CDD1008F2423 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BB32162AF7B008F2423 /* PhoneVerificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		19C75B7D2162A8D6008F2423 /* PhoneVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C75B802162A8D6008F2423 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19C75B822162A8D6008F2423 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19C75B852162A8D6008F2423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19C75B872162A8D7008F2423 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19C75B8A2162A8D7008F2423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		19C75B9C2162A8D7008F2423 /* PhoneVerificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneVerificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C75BA02162A8D7008F2423 /* PhoneVerificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationUITests.swift; sourceTree = "<group>"; };
 		19C75BA22162A8D7008F2423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19C75BB32162AF7B008F2423 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		19C75BB42162AF7B008F2423 /* PhoneVerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneVerificationViewController.xib; sourceTree = "<group>"; };
+		19C75BB82162C4CD008F2423 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		19C75BBA2162C9BC008F2423 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,9 @@
 		19C75B7F2162A8D6008F2423 /* PhoneVerification */ = {
 			isa = PBXGroup;
 			children = (
+				19C75BB72162C4B1008F2423 /* Coordinator */,
+				19C75BB22162AF66008F2423 /* View */,
 				19C75B802162A8D6008F2423 /* AppDelegate.swift */,
-				19C75B822162A8D6008F2423 /* ViewController.swift */,
 				19C75B842162A8D6008F2423 /* Main.storyboard */,
 				19C75B872162A8D7008F2423 /* Assets.xcassets */,
 				19C75B892162A8D7008F2423 /* LaunchScreen.storyboard */,
@@ -123,6 +130,24 @@
 				19C75BA22162A8D7008F2423 /* Info.plist */,
 			);
 			path = PhoneVerificationUITests;
+			sourceTree = "<group>";
+		};
+		19C75BB22162AF66008F2423 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19C75BB32162AF7B008F2423 /* PhoneVerificationViewController.swift */,
+				19C75BB42162AF7B008F2423 /* PhoneVerificationViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19C75BB72162C4B1008F2423 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				19C75BB82162C4CD008F2423 /* AppCoordinator.swift */,
+				19C75BBA2162C9BC008F2423 /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C75BB62162AF7B008F2423 /* PhoneVerificationViewController.xib in Resources */,
 				19C75B8B2162A8D7008F2423 /* LaunchScreen.storyboard in Resources */,
 				19C75B882162A8D7008F2423 /* Assets.xcassets in Resources */,
 				19C75B862162A8D6008F2423 /* Main.storyboard in Resources */,
@@ -256,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C75B832162A8D6008F2423 /* ViewController.swift in Sources */,
+				19C75BBD2162CDD1008F2423 /* PhoneVerificationViewController.swift in Sources */,
+				19C75BBB2162C9BC008F2423 /* Coordinator.swift in Sources */,
+				19C75BB92162C4CD008F2423 /* AppCoordinator.swift in Sources */,
 				19C75B812162A8D6008F2423 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
