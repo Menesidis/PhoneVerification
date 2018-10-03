@@ -17,6 +17,7 @@
 		19C75BB92162C4CD008F2423 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BB82162C4CD008F2423 /* AppCoordinator.swift */; };
 		19C75BBB2162C9BC008F2423 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BBA2162C9BC008F2423 /* Coordinator.swift */; };
 		19C75BBD2162CDD1008F2423 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BB32162AF7B008F2423 /* PhoneVerificationViewController.swift */; };
+		19C75BC42163EA53008F2423 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75BC32163EA53008F2423 /* Network.swift */; };
 		292CA06B55A0A04CA4B7EC30 /* Pods_PhoneVerificationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5882BBE1578690DA427F936 /* Pods_PhoneVerificationTests.framework */; };
 		444D6809293716923681DA38 /* Pods_PhoneVerification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D7FD5CC0D5B517748A85B7 /* Pods_PhoneVerification.framework */; };
 		86556673D353FE53A150C057 /* Pods_PhoneVerificationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6394E229EB07C3977C00302F /* Pods_PhoneVerificationUITests.framework */; };
@@ -58,6 +59,7 @@
 		19C75BB42162AF7B008F2423 /* PhoneVerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneVerificationViewController.xib; sourceTree = "<group>"; };
 		19C75BB82162C4CD008F2423 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		19C75BBA2162C9BC008F2423 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		19C75BC32163EA53008F2423 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3F89961A7B5A99C9308852E0 /* Pods-PhoneVerificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneVerificationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneVerificationTests/Pods-PhoneVerificationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6394E229EB07C3977C00302F /* Pods_PhoneVerificationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneVerificationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710ABF2A345CAD8217ED2585 /* Pods-PhoneVerification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneVerification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneVerification/Pods-PhoneVerification.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,8 @@
 		19C75B7F2162A8D6008F2423 /* PhoneVerification */ = {
 			isa = PBXGroup;
 			children = (
+				19C75BC22163EA40008F2423 /* Network */,
+				19C75BC12163E485008F2423 /* Repository */,
 				19C75BB72162C4B1008F2423 /* Coordinator */,
 				19C75BB22162AF66008F2423 /* View */,
 				19C75B802162A8D6008F2423 /* AppDelegate.swift */,
@@ -165,6 +169,21 @@
 				19C75BBA2162C9BC008F2423 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		19C75BC12163E485008F2423 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		19C75BC22163EA40008F2423 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				19C75BC32163EA53008F2423 /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		7C93DFA415101CB5132763EF /* Pods */ = {
@@ -421,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C75BC42163EA53008F2423 /* Network.swift in Sources */,
 				19C75BBD2162CDD1008F2423 /* PhoneVerificationViewController.swift in Sources */,
 				19C75BBB2162C9BC008F2423 /* Coordinator.swift in Sources */,
 				19C75BB92162C4CD008F2423 /* AppCoordinator.swift in Sources */,
