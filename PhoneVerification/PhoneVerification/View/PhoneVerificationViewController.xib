@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneVerificationViewController" customModule="PhoneVerification" customModuleProvider="target">
             <connections>
+                <outlet property="phoneNumberLabel" destination="8ZY-Ed-ocm" id="JaT-eO-lK6"/>
+                <outlet property="phoneNumberTextField" destination="j7N-Cy-Z80" id="wvH-Ke-vpj"/>
+                <outlet property="responseLabel" destination="Bgs-8o-xcr" id="yIm-dj-k4m"/>
+                <outlet property="responseResultsLabel" destination="pgX-2E-Z5S" id="QQf-8H-XcY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +22,49 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZY-Ed-ocm">
+                    <rect key="frame" x="15" y="40" width="345" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7N-Cy-Z80">
+                    <rect key="frame" x="15" y="80.5" width="345" height="21"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-8o-xcr">
+                    <rect key="frame" x="15" y="141.5" width="345" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgX-2E-Z5S">
+                    <rect key="frame" x="15" y="182.5" width="345" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pgX-2E-Z5S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="3Jb-sL-fDW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bgs-8o-xcr" secondAttribute="trailing" constant="15" id="8NO-WG-7k6"/>
+                <constraint firstItem="8ZY-Ed-ocm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="9Nc-fu-lHA"/>
+                <constraint firstItem="j7N-Cy-Z80" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Ejp-PY-Sek"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j7N-Cy-Z80" secondAttribute="trailing" constant="15" id="HAu-oe-iDc"/>
+                <constraint firstItem="Bgs-8o-xcr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="K4J-JU-TGT"/>
+                <constraint firstItem="Bgs-8o-xcr" firstAttribute="top" secondItem="j7N-Cy-Z80" secondAttribute="bottom" constant="40" id="Nin-2u-kau"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pgX-2E-Z5S" secondAttribute="trailing" constant="15" id="a1y-il-MPk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8ZY-Ed-ocm" secondAttribute="trailing" constant="15" id="dGZ-8z-uOg"/>
+                <constraint firstItem="8ZY-Ed-ocm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="fyN-cy-iFD"/>
+                <constraint firstItem="j7N-Cy-Z80" firstAttribute="top" secondItem="8ZY-Ed-ocm" secondAttribute="bottom" constant="20" id="kJ3-QG-0An"/>
+                <constraint firstItem="pgX-2E-Z5S" firstAttribute="top" secondItem="Bgs-8o-xcr" secondAttribute="bottom" constant="20" id="v8Y-UH-Spo"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
 </document>
