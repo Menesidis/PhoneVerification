@@ -33,7 +33,8 @@ extension PhoneService: TargetType {
         switch self {
         case let .fetchPersonData(phone): // Always sends parameters in URL, regardless of which HTTP method is used
             return .requestParameters(parameters: ["phone": phone,
-                                                   "api_key": PhoneService.privateKey], encoding: URLEncoding.queryString)
+                                                   "api_key": PhoneService.privateKey,
+                                                   "phone.country_hint": "GR"], encoding: URLEncoding.queryString)
         }
     }
     var sampleData: Data {
