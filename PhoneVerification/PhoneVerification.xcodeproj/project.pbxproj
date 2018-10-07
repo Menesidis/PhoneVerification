@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19BAE8CE21669BFE0006A179 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAE8CD21669BFE0006A179 /* Record.swift */; };
+		19BAE8D0216A93260006A179 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAE8CF216A93260006A179 /* Repository.swift */; };
 		19C75B812162A8D6008F2423 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C75B802162A8D6008F2423 /* AppDelegate.swift */; };
 		19C75B862162A8D6008F2423 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C75B842162A8D6008F2423 /* Main.storyboard */; };
 		19C75B882162A8D7008F2423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C75B872162A8D7008F2423 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		09D7FD5CC0D5B517748A85B7 /* Pods_PhoneVerification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneVerification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12412489CAE050A50DFDA8B2 /* Pods-PhoneVerification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneVerification.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneVerification/Pods-PhoneVerification.release.xcconfig"; sourceTree = "<group>"; };
+		19BAE8CD21669BFE0006A179 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		19BAE8CF216A93260006A179 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		19C75B7D2162A8D6008F2423 /* PhoneVerification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneVerification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C75B802162A8D6008F2423 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19C75B852162A8D6008F2423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19BAE8CC21669BDE0006A179 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19BAE8CD21669BFE0006A179 /* Record.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		19C75B742162A8D6008F2423 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 		19C75B7F2162A8D6008F2423 /* PhoneVerification */ = {
 			isa = PBXGroup;
 			children = (
+				19BAE8CC21669BDE0006A179 /* Model */,
 				19C75BC22163EA40008F2423 /* Network */,
 				19C75BC12163E485008F2423 /* Repository */,
 				19C75BB72162C4B1008F2423 /* Coordinator */,
@@ -174,6 +187,7 @@
 		19C75BC12163E485008F2423 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				19BAE8CF216A93260006A179 /* Repository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -440,6 +454,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BAE8D0216A93260006A179 /* Repository.swift in Sources */,
+				19BAE8CE21669BFE0006A179 /* Record.swift in Sources */,
 				19C75BC42163EA53008F2423 /* Network.swift in Sources */,
 				19C75BBD2162CDD1008F2423 /* PhoneVerificationViewController.swift in Sources */,
 				19C75BBB2162C9BC008F2423 /* Coordinator.swift in Sources */,

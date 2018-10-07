@@ -12,6 +12,7 @@ import Moya
 enum PhoneService {
     static private let privateKey = "24303e7d9bd3489389193211ae13f3be"
     case fetchPersonData(phone: String)
+    
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -62,21 +63,60 @@ class Network {
     
     let provider = MoyaProvider<PhoneService>()
 
-    func fetchPersonData(phone: String) {
+    func fetchPersonData(phone: String,
+                         success successCallback: @escaping (Record) -> Void,
+                         error errorCallback: @escaping (Swift.Error) -> Void) {
+
         provider.request(PhoneService.fetchPersonData(phone: phone)) { result in
-            
+
             switch result {
             case .success(let response):
                 do {
                     print("URL: \(response.request!.url!)")
                     print(try response.mapJSON())
+                    
+                    let recordResponse = try response.filterSuccessfulStatusCodes()
+                    let record = try recordResponse.map(Record.self)
+                    
+                    successCallback(record)
+
                 } catch {
                     print(error.localizedDescription)
+                    errorCallback(error)
+                    
                 }
-            case .failure:
-                print("Failed!")
+            case .failure(let error):
+                print(error.localizedDescription)
+                errorCallback(error)
             }
         }
 
     }
+    
+    
+//    static func request(target: PhoneService,
+//                        success successCallback: @escaping (Response) -> Void, error errorCallback: @escaping (Swift.Error) -> Void, failure failureCallback: @escaping (MoyaError) -> Void) {
+//
+//        provider.request(target) { (result) in
+//            switch result {
+//            case .success(let response):
+//                // 1:
+//                if response.statusCode >= 200 && response.statusCode <= 300 {
+//
+//                    let recordResponse = try response.filterSuccessfulStatusCodes()
+//                    let record = try recordResponse.map(Record.self)
+//
+//
+//                    successCallback(response)
+//                } else {
+//                    // 2:
+//                    let error = NSError(domain:"com.vsemenchenko.networkLayer", code:0, userInfo:[NSLocalizedDescriptionKey: "Parsing Error"])
+//                    errorCallback(error)
+//                }
+//            case .failure(let error):
+//                // 3:
+//                failureCallback(error)
+//            }
+//        }
+//    }
 }
