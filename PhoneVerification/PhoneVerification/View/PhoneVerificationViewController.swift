@@ -14,13 +14,12 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var responseLabel: UILabel!
     @IBOutlet weak var responseResultsLabel: UILabel!
     
-    let network = Network()
+    let repository = Repository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         phoneNumberTextField.delegate = self
-        
         applyTheme()
         localize()
     }
@@ -32,6 +31,7 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
         phoneNumberTextField.textColor = UIColor.white
         responseLabel.textColor = UIColor.white
         responseLabel.textColor = UIColor.white
+        responseResultsLabel.numberOfLines = 0 
     }
     
     private func localize() {
@@ -43,18 +43,25 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 
     /*
      1. Fetch network calls from : https://pro.whitepages.com/developer/documentation/reverse-phone-api/
-     2. Deserialize parameter
-     3. Inject country code
-     4. Add Reactor Kit
-     5. Add RXSwift
-     6. Add Firebase
-     7. Add Fastlane
+     2. Inject country code
+     3. Add Reactor Kit
+     4. Add RXSwift
+     5. Add Firebase
+     6. Add Fastlane
      
      */
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let phone = textField.text, phone.count > 4 {
-            network.fetchPersonData(phone: phone)
+            repository.fetchPersonData(phone: phone, success: { record in
+                
+                let responseResultsValue = "Record phone: \(record.phoneNumber) \n carrier: \(record.carrier) \n countryCallingCode: \(record.countryCallingCode    ) \n carrier type: \(record.carrier)"
+                DispatchQueue.main.async {
+                    self.responseResultsLabel.text = responseResultsValue
+                }
+            }) { error in
+                print("An error occured!")
+            }
         }
     }
     
